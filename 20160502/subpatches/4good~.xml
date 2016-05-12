@@ -1,0 +1,231 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Users\dl-110\Desktop\CHI Screensaver\20160426\4good.v4p" systemname="4good" filename="C:\Users\dl-110\Desktop\CHI Screensaver\20160426\4good.v4p">
+   <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="4755" top="6990" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="6" values="|0.53333,0.00000,0.01970,1.00000|,|0.53333,0.15912,0.00000,1.00000|,|0.60000,0.24126,0.00000,1.00000|,|0.66667,0.32619,0.00000,1.00000|,|0.73333,0.42049,0.00000,1.00000|,|0.80000,0.52458,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="5070" top="5325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Source Maximum" visible="1" slicecount="1" values="640">
+   </PIN>
+   <PIN pinname="Destination Maximum" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="4710" top="4245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1" slicecount="1" values="418">
+   </PIN>
+   <PIN pinname="Y" visible="1" slicecount="1" values="90">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="3" systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="4920" top="6390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform In" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="TranslateX" pintype="Input" visible="1" slicecount="1" values="0.115">
+   </PIN>
+   <PIN pinname="TranslateY" pintype="Input" visible="1" slicecount="1" values="-0.33">
+   </PIN>
+   <PIN pinname="ScaleX" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ScaleY" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Rotate" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="CenterX" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="CenterY" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Transform Out" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE id="4" systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="5055" top="5730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XY" pintype="Input" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="X" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Y" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Color)" nodename="GetSlice (Color)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="5730" top="5940" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="-2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="0" dstpinname="Color">
+   </LINK>
+   <NODE id="8" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="4755" top="7590" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4755" top="7590" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="8" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="X" dstnodeid="3" dstpinname="ScaleX">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y" dstnodeid="3" dstpinname="ScaleY">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="4" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="XY" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <NODE id="11" systemname="IOBox (Color)" componentmode="InABox" nodename="IOBox (Color)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Color">
+   </PIN>
+   <BOUNDS type="Box" left="7455" top="3500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7455" top="3500" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="2910" top="4155" width="8685" height="9690">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="3900" top="3675" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1" slicecount="1" values="..\assets\4good.png">
+   </PIN>
+   <PIN pinname="Load In Background" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Original Width" visible="1">
+   </PIN>
+   <PIN pinname="Original Height" visible="1">
+   </PIN>
+   <PIN pinname="Use Preloaded Item" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="selectTexture" filename="selectTexture.v4p" nodename="CHI Screensaver\20160426\selectTexture.v4p" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="3660" top="3020" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3045" top="195" width="5055" height="5650">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9390" top="8895" width="5055" height="5640">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1" slicecount="7" values="1,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="14" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Original Width" dstnodeid="2" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Original Height" dstnodeid="2" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="15" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3375" top="2205" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3375" top="2205" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="7" visible="1" values="|C:\Users\dl-110\Desktop\CHI Screensaver\assets\4good.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\date.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\diamond.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\place.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\quad.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\template.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\triangle.png|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="17">
+   <BOUNDS type="Node" left="4890" top="945" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4890" top="945" width="510" height="1710">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="7" values="1,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="7" values="1,0,0,0,0,0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Select">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5355" top="4635" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5355" top="4635" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1920,1080">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Source Maximum">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output String" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Color Output" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   </PATCH>

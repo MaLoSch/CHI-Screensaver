@@ -1,0 +1,527 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Users\dl-110\Desktop\CHI Screensaver\20160502\_root.v4p" systemname="_root" filename="C:\Users\dl-110\Desktop\CHI Screensaver\20160426\_root.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="-105" top="0" width="14610" height="15705">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="480" top="5070" width="2550" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Enabled" visible="-1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 6" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Dir (File)" filename="" nodename="Dir (File)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="8055" top="2880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filenames" visible="1">
+   </PIN>
+   <PIN pinname="Directory" slicecount="1" values="..\assets">
+   </PIN>
+   <PIN pinname="Update" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Short Filenames" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="97" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8400" top="3300" width="1380" height="1710">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8400" top="3300" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="file.foo">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="4" values="|CHI Screensaver\assets\4good.png|,|CHI Screensaver\assets\quad.png|,|CHI Screensaver\assets\template.png|,|CHI Screensaver\assets\triangle.png|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Short Filenames" dstnodeid="97" dstpinname="Input String" linkstyle="PolyLine">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="143" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="1140" top="7770" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1140" top="7770" width="705" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1920">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="144" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="1365" top="8190" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1365" top="8190" width="690" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1080">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="200" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8745" top="2250" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8745" top="2250" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Update">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="200" srcpinname="Y Output Value" dstnodeid="102" dstpinname="Update">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="208" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2670" top="7380" width="405" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2670" top="7380" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.37">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE systemname="colorGenerator" filename="subpatches\colorGenerator.v4p" nodename="subpatches\colorGenerator.v4p" componentmode="Hidden" id="194">
+   <BOUNDS type="Node" left="5235" top="3630" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5235" top="3630" width="6405" height="6540">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5910" top="2475" width="6405" height="6540">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="background" filename="subpatches\background.v4p" nodename="subpatches\background.v4p" componentmode="Hidden" id="195">
+   <BOUNDS type="Node" left="480" top="4650" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="480" top="4650" width="4215" height="4330">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="4215" height="4330">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="195" srcpinname="Layer" dstnodeid="40" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="flocking" filename="subpatches\flocking.v4p" nodename="subpatches\flocking.v4p" componentmode="Hidden" id="196">
+   <BOUNDS type="Node" left="2970" top="4650" width="2310" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2970" top="4650" width="8905" height="9205">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2940" top="1515" width="12450" height="13560">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Filenames" dstnodeid="196" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="8055" y="3885">
+   </LINKPOINT>
+   <LINKPOINT x="4530" y="3885">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="194" srcpinname="Output" dstnodeid="196" dstpinname="Color" linkstyle="PolyLine">
+   </LINK>
+   <NODE systemname="coloredArrow" filename="subpatches\coloredArrow.v4p" nodename="subpatches\coloredArrow.v4p" componentmode="Hidden" id="197">
+   <BOUNDS type="Node" left="9660" top="9585" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9660" top="9585" width="6855" height="9105">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9510" top="3015" width="7680" height="12585">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Filenames" dstnodeid="197" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="8085" y="6353">
+   </LINKPOINT>
+   <LINKPOINT x="9675" y="6353">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="194" srcpinname="Output" dstnodeid="197" dstpinname="Color" linkstyle="Bezier">
+   <LINKPOINT x="5295" y="6735">
+   </LINKPOINT>
+   <LINKPOINT x="10800" y="6735">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="4good" filename="subpatches\4good.v4p" nodename="subpatches\4good.v4p" componentmode="Hidden" id="198">
+   <BOUNDS type="Node" left="8070" top="9585" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8070" top="9585" width="4075" height="5590">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2910" top="4155" width="8685" height="9690">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1" slicecount="7" values="1,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="7" values="|C:\Users\dl-110\Desktop\CHI Screensaver\assets\4good.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\date.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\diamond.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\place.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\quad.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\template.png|,|C:\Users\dl-110\Desktop\CHI Screensaver\assets\triangle.png|">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Filenames" dstnodeid="198" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="8085" y="6360">
+   </LINKPOINT>
+   <LINKPOINT x="8085" y="6360">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="194" srcpinname="Output" dstnodeid="198" dstpinname="Color" linkstyle="Bezier">
+   <LINKPOINT x="5295" y="6735">
+   </LINKPOINT>
+   <LINKPOINT x="8760" y="6735">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="CHILogoFrame" filename="subpatches\CHILogoFrame.v4p" nodename="subpatches\CHILogoFrame.v4p" componentmode="Hidden" id="199">
+   <BOUNDS type="Node" left="12810" top="9585" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12810" top="9585" width="7495" height="7050">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9420" top="675" width="7485" height="12870">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Filenames" dstnodeid="199" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="8115" y="6353">
+   </LINKPOINT>
+   <LINKPOINT x="12810" y="6353">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="diamonds" filename="subpatches\diamonds.v4p" componentmode="Hidden" id="201" nodename="subpatches\diamonds.v4p">
+   <BOUNDS type="Node" left="11235" top="9585" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11235" top="9585" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="165" top="4440" width="9000" height="10245">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Filenames" dstnodeid="201" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="8100" y="6360">
+   </LINKPOINT>
+   <LINKPOINT x="11250" y="6360">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="194" srcpinname="Output" dstnodeid="201" dstpinname="Color" linkstyle="Bezier">
+   <LINKPOINT x="5295" y="6728">
+   </LINKPOINT>
+   <LINKPOINT x="12120" y="6728">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="209">
+   <BOUNDS type="Node" left="1035" top="2250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   <PIN pinname="Simulate" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="210">
+   <BOUNDS type="Node" left="1020" top="3630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="209" srcpinname="Bang" dstnodeid="210" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="210" srcpinname="Output" dstnodeid="196" dstpinname="Switch" linkstyle="Bezier">
+   <LINKPOINT x="1080" y="4260">
+   </LINKPOINT>
+   <LINKPOINT x="2970" y="4260">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="212">
+   <BOUNDS type="Node" left="480" top="6510" width="585" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="-1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Layer" dstnodeid="212" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="whiteOverlay" filename="subpatches\whiteOverlay.v4p" nodename="subpatches\whiteOverlay.v4p" componentmode="InAWindow" id="222">
+   <BOUNDS type="Node" left="1024" top="6094" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="150" top="3704" width="4735" height="4780">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7530" top="5010" width="4725" height="4770">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="210" srcpinname="Output" dstnodeid="222" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="1050" y="5055">
+   </LINKPOINT>
+   <LINKPOINT x="1050" y="4950">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\addonpack\lib\nodes\modules\Transform\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="223">
+   <BOUNDS type="Node" left="2040" top="7770" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Initial Pitch" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Initial Yaw" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Box" left="2040" top="7770">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="208" srcpinname="Y Output Value" dstnodeid="223" dstpinname="Initial Distance">
+   </LINK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="225" border="0">
+   <BOUNDS type="Node" left="480" top="8610" width="2040" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="480" top="8610" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16200" top="720" width="11760" height="7065">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D32F_LOCKABLE">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="225" dstpinname="Backbuffer Width" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="Y Output Value" dstnodeid="225" dstpinname="Backbuffer Height" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="223" srcpinname="View" dstnodeid="225" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="223" srcpinname="Projection" dstnodeid="225" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="Bang" dstnodeid="194" dstpinname="Reset" linkstyle="Bezier">
+   <LINKPOINT x="1090" y="3050">
+   </LINKPOINT>
+   <LINKPOINT x="5240" y="3070">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="Bang" dstnodeid="196" dstpinname="Reset" linkstyle="Bezier">
+   <LINKPOINT x="1090" y="3560">
+   </LINKPOINT>
+   <LINKPOINT x="3710" y="3580">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="233">
+   <BOUNDS type="Node" left="2460" top="8190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="233" srcpinname="Transform Out" dstnodeid="225" dstpinname="Aspect Ratio">
+   </LINK>
+   <LINK srcnodeid="225" srcpinname="Actual Backbuffer Width" dstnodeid="233" dstpinname="Aspect Width" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="225" srcpinname="Actual Backbuffer Height" dstnodeid="233" dstpinname="Aspect Height" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Layer" dstnodeid="225" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="234">
+   <BOUNDS type="Node" left="2460" top="9630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="225" srcpinname="EX9 Out" dstnodeid="234" dstpinname="Source">
+   </LINK>
+   <NODE systemname="Quad (DX9)" filename="" nodename="Quad (DX9)" componentmode="Hidden" id="235">
+   <BOUNDS type="Node" left="360" top="10035" width="7395" height="270">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="234" srcpinname="Texture Out" dstnodeid="235" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="237">
+   <BOUNDS type="Node" left="1410" top="9630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="237" srcpinname="Transform Out" dstnodeid="235" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="238" border="1">
+   <BOUNDS type="Node" left="360" top="11175" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="360" top="11175" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15840" top="2130" width="11760" height="7065">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" filename="" nodename="Group (EX9)" componentmode="Hidden" id="239">
+   <BOUNDS type="Node" left="360" top="10455" width="7770" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="-1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="239" srcpinname="Layer" dstnodeid="238" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="235" srcpinname="Layer" dstnodeid="239" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="240">
+   <BOUNDS type="Node" left="8070" top="10005" width="4815" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="-1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="240" srcpinname="Layer" dstnodeid="239" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="222" srcpinname="Layer" dstnodeid="212" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="238" dstpinname="Backbuffer Width" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="Y Output Value" dstnodeid="238" dstpinname="Backbuffer Height" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="241" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="315" top="210" width="915" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="315" top="210" width="3120" height="405">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|CHI 2016 - Screensaver|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="13">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="242" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5250" top="2250" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5250" top="2250" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="EnableColorShift">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="242" srcpinname="Y Output Value" dstnodeid="194" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="196" srcpinname="Layer" dstnodeid="40" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Layer" dstnodeid="240" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="197" srcpinname="Layer" dstnodeid="240" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="201" srcpinname="Layer" dstnodeid="240" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="199" srcpinname="Layer" dstnodeid="240" dstpinname="Layer 4">
+   </LINK>
+   </PATCH>
